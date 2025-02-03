@@ -1,5 +1,9 @@
-import secrets
+"""
+This module contains functions for generating random numbers, specifically
+for replacing elements in an array with random values in the range 1 to 20.
+"""
 
+import secrets
 
 def random_array(arr):
     """replaces elements in array with number in the range 1 to 20
