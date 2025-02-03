@@ -1,1 +1,1 @@
-`pyflakes hw2_debugging.py` command doesn't produce any output.
+`pyflakes hw2_debugging.py rand.py` command doesn't produce any output.
