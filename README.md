@@ -29,7 +29,7 @@ The following are the tasks that were performed:
 
 #
 
-### Execute AutoPep8 and Two (2)Static Analysis Tools
+### Execute Three (3) Static Analysis Tools
 - Use the following tools to analyze the code:
   1. **Pylint**: A static analysis tool to identify errors, style issues, and other potential problems in Python code.
   
