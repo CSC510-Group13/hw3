@@ -78,7 +78,7 @@ def test_dfs_2():
     assert dfs(graph, 4) == [4, 5], "DFS failed on component 2"
 
 def test_dfs_3():
-    """Test DFS on a graph with a single node"""
+    """Test DFS on a graph with a node"""
     graph = {
         "X": []
     }
