@@ -33,12 +33,14 @@ The following are the tasks that were performed:
 - Use the following tools to analyze the code:
   1. **Pylint**: A static analysis tool to identify errors, style issues, and other potential problems in Python code.
   2. **pyflakes**: A simple program which checks Python source files for errors.
+  3. **bandit**: A tool which checks Python files for security concerns.
 
   
 To run these tools, use the following commands:
 ```bash
 pylint hw2_debugging.py rand.py
 pyflakes hw2_debugging.py rand.py
+bandit hw2_debugging.py rand.py
 ```
 ### License
 This project is licensed under the Apache License 2.0 See the LICENSE file for more details.
