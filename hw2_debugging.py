@@ -15,7 +15,7 @@ def dfs(graph, start_node):
         start_node (Any): starting node
 
     Returns:
-        list: a list of nodes in the order
+        list: a list of nodes in order
     """
     visited = []
     stack = [start_node]
