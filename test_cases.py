@@ -66,7 +66,7 @@ def test_dfs_1():
     assert result == expected, f"Expected {expected}, but got {result}"
 
 def test_dfs_2():
-    """Test DFS on a disconnected graph"""
+    """Test DFS on a graph that is disconnected"""
     graph = {
         1: [2],
         2: [1, 3],
