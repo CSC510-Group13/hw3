@@ -8,7 +8,7 @@ mainGraph = {
 
 def dfs(graph, start_node):
     """
-    does dfs
+    does dfs in graph
 
     Args:
         graph (dict): A dictionary
