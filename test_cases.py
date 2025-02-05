@@ -1,5 +1,5 @@
 """test cases for merge sort"""
-from hw2_debugging import merge_sort
+from hw2_debugging import merge_sort, dfs
 
 
 def test_merge_sort_1():
@@ -50,3 +50,39 @@ def test_merge_sort_6():
     result = merge_sort(input_arr)
     expected = [5, 5, 5, 5, 5]
     assert result == expected, f"Expected {expected}, but got {result}"
+
+def test_dfs_1():
+    """Test DFS on a small connected graph"""
+    graph = {
+        "A": ["B", "C"],
+        "B": ["A", "D", "E"],
+        "C": ["A", "F"],
+        "D": ["B"],
+        "E": ["B", "F"],
+        "F": ["C", "E"]
+    }
+    result = dfs(graph, "A")
+    expected = ["A", "C", "F", "E", "B", "D"]
+    assert result == expected, f"Expected {expected}, but got {result}"
+
+def test_dfs_2():
+    """Test DFS on a graph that is disconnected"""
+    graph = {
+        1: [2],
+        2: [1, 3],
+        3: [2],
+        4: [5],
+        5: [4]
+    }
+    assert dfs(graph, 1) == [1, 2, 3], "DFS failed on component 1"
+    assert dfs(graph, 4) == [4, 5], "DFS failed on component 2"
+
+def test_dfs_3():
+    """Test DFS on a graph with one node"""
+    graph = {
+        "X": []
+    }
+    result = dfs(graph, "X")
+    expected = ["X"]
+    assert result == expected, f"Expected {expected}, but got {result}"
+
