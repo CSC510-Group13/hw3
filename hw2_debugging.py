@@ -12,7 +12,7 @@ def dfs(graph, start_node):
 
     Args:
         graph (dict): A dictionary
-        start_node (Any): Starting node
+        start_node (Any): starting node
 
     Returns:
         list: a list of nodes in the order
