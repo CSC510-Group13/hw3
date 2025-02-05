@@ -1,6 +1,35 @@
 """implementation of merge sort"""
 import rand
 
+mainGraph = {
+    "A": ["B", "C"],
+    "B": ["A", "D", "E"],
+}
+
+def dfs(graph, start_node):
+    """
+    does dfs
+
+    Args:
+        graph (dict): A dictionary
+        start_node (Any): Starting node
+
+    Returns:
+        list: A list of nodes in the order
+    """
+    visited = []
+    stack = [start_node]
+
+    while stack:
+        current = stack.pop()
+        if current not in visited:
+            visited.append(current)
+            for neighbor in reversed(graph[current]):
+                if neighbor not in visited:
+                    stack.append(neighbor)
+
+    return visited
+
 
 def merge_sort(arr):
     """performs a merge sort on the input array
@@ -53,3 +82,8 @@ input_arr = rand.random_array([None] * 20)
 output_arr = merge_sort(input_arr)
 print(f"input array: {input_arr}")
 print(f"output array: {output_arr}")
+
+
+
+traversal_order = dfs(mainGraph, "A")
+print("Breadth-First Search Order (Buggy):", traversal_order)
